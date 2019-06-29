@@ -9,8 +9,13 @@ class Board extends React.Component {
     };
   }
 
-  handleClick = () => {
-    console.log("clicked");
+  handleClick = i => {
+    const squares = this.state.squares.slice();
+    squares[i] = "X";
+    console.log(squares);
+    this.setState({
+      squares: squares
+    });
   };
 
   renderSquare(i) {
